@@ -3,6 +3,15 @@ import SearchCard from './SearchCard';
 import { useNavigate } from 'react-router-dom';
 
 function SearchResult(props) {
+  const getImageUrl = (id) => {
+  const formats = ['jpg', 'jpeg', 'png'];
+  for (let ext of formats) {
+    const img = new Image();
+    img.src = `/images/${id}.${ext}`;
+    if (img.complete) return img.src;
+  }
+  return '/images/placeholder.jpg'; // fallback image
+};
     const navigate = useNavigate();
     const [items, setItems] = useState([]);
 
@@ -33,7 +42,7 @@ function SearchResult(props) {
   return (
     <div className="searchResult">
       {items.map((element)=>{
-        return <SearchCard key={element.article_id} article_id={element.article_id} title={element.prod_name} price={element.price} desc={element.index_group_name} image={`data:image/jpeg;base64,${element.image}`} setItemClicked={setItemClicked} />
+        return <SearchCard key={element.article_id} article_id={element.article_id} title={element.prod_name} price={element.price} desc={element.index_group_name} image={getImageUrl(element.article_id)} setItemClicked={setItemClicked} />
       })}
     </div>
   )

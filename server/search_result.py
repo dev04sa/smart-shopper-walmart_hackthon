@@ -4,11 +4,12 @@ from nltk.stem import PorterStemmer
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
-articles = pd.read_csv('articles.csv')
+articles = pd.read_csv('articles_with_existing_images.csv')
+# articles = pd.read_csv('articles.csv')
 indices = pd.Series(articles.index, index=articles['article_id']).drop_duplicates()
 
 # Taking only 10000 items :-
-articles = articles[:10000]
+articles = articles[:273]
 
 cols = ['prod_name', 'product_type_name', 'product_group_name',
         'graphical_appearance_name', 'colour_group_name',

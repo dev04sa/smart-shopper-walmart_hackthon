@@ -1,7 +1,8 @@
 import pandas as pd
 import pickle
 
-articles = pd.read_csv('articles.csv')
+articles = pd.read_csv('articles_with_existing_images.csv')
+# articles = pd.read_csv('articles.csv')
 indices = pd.Series(articles.index, index=articles['article_id']).drop_duplicates()
 
 # Load cos_sim from the pickle file :-
