@@ -163,4 +163,4 @@ def promotion():
         return {"error": "Server error"}, 500
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000) # Start the server at port 8000
+    app.run(debug=True, port=2000) # Start the server at port 8000
