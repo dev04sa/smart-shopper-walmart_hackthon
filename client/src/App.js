@@ -10,6 +10,7 @@ import Payment from './components/Payment';
 import SearchRecommend from './components/SearchRecommend';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
 function App() {
   const [newSearch, setNewSearch] = useState(0);
   const [reloadDesc, setReloadDesc] = useState(0);
