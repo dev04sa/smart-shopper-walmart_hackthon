@@ -227,6 +227,12 @@ const Navbar = (props) => {
             <FaHeart className="myIcon text-[17px]" />
             <Link to="/payment" className="text-[16px] font-semibold">My Items</Link>
           </div>
+           <div className="tryon flex items-center gap-2 hover:bg-[#06529a] p-3 rounded-full desktopView"
+            style={{ cursor: 'pointer' }}
+            onClick={() => window.open('http://localhost:5173/', '_blank')}
+          >
+            <span className="text-[16px] font-semibold">TRY-ON</span>
+          </div>
           <div className="hover:bg-[#06529a] p-3 rounded-full relative">
             <Link to="/checkout">
               <AiOutlineShoppingCart className="w-7 h-7" />
