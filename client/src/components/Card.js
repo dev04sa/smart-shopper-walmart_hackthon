@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Card = (props) => {
   const navigate = useNavigate();
+  console.log(props.image);
 
   const viewItem=()=>{
     localStorage.setItem('selectedItem', props.article_id);

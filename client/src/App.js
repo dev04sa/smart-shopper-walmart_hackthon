@@ -9,6 +9,7 @@ import Checkout from './components/Checkout';
 import Payment from './components/Payment';
 import SearchRecommend from './components/SearchRecommend';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Try from './components/Try';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Navbar newSearch={newSearch} setNewSearch={setNewSearch} isLogin={isLogin} setIsLogin={setIsLogin} numItemsCart={numItemsCart} />
         <Routes>
           <Route exact path='/' element={<Hero isLogin={isLogin} />}></Route>
+          <Route exact path='/VirtualTry' element={<Try isLogin={isLogin} />}></Route>
           <Route exact path='/search' element={<SearchResult newSearch={newSearch} />}></Route>
           <Route exact path='/itemdesc' element={<ItemDesc key={reloadDesc} reloadDesc={reloadDesc} setReloadDesc={setReloadDesc} isLogin={isLogin} numItemsCart={numItemsCart} setNumItemsCart={setNumItemsCart} />}></Route>
           <Route exact path='/register' element={<Registration />}></Route>
@@ -31,6 +33,7 @@ function App() {
           <Route exact path='/checkout' element={<Checkout isLogin={isLogin} numItemsCart={numItemsCart} buyInStore={buyInStore} setBuyInStore={setBuyInStore} setNumItemsCart={setNumItemsCart} />}></Route>
           <Route exact path='/payment' element={<Payment buyInStore={buyInStore} />}></Route>
           <Route exact path='/searchrec' element={<SearchRecommend />}></Route>
+          
         </Routes>
       </Router>
     </div>

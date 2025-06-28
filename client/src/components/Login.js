@@ -28,11 +28,11 @@ function Login(props) {
     return (
         <div>
             <form id="loginForm" onSubmit={handleLogin}>
-                <div class="container">
+                <div class="container  ">
                     <label for="uname"><b>Email</b></label>
-                    <input type="email" id="email" placeholder="Enter Email ID" name="uname" required />
+                    <input className='bg-white' type="email" id="email" placeholder="Enter Email ID" name="uname" required />
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" id="password" placeholder="Enter Password" name="psw" required />
+                    <input className='bg-white' type="password" id="password" placeholder="Enter Password" name="psw" required />
                     <button type="submit">Login</button>
                 </div>
                 <div class="container">

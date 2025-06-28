@@ -28,7 +28,7 @@ function Offer(props) {
                         </div>
                     </div>
                     <div className="pt-4">
-                        <p className="font-semibold ">Best sold {props.prod_name} in 2023</p>
+                        <p className="font-semibold ">Best sold {props.prod_name} in 2025</p>
                     </div>
                 </div>
             </div>
