@@ -26,7 +26,7 @@ import {
 } from "@ant-design/icons";
 
 import ImageUpload from "./ImageUpload";
-import Footer from './Footer'; 
+// import Footer from './Footer'; 
 const { Header, Content} = Layout;
 const { Title, Text } = Typography;
 
@@ -411,7 +411,7 @@ function Try() {
           </div>
         </Content>
 
-        <Footer isDarkMode={isDarkMode} />
+        {/* <Footer isDarkMode={isDarkMode} /> */}
 
         <ToastContainer theme={isDarkMode ? "dark" : "light"} />
       </Layout>
